@@ -12,7 +12,7 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (Object.values(busqueda).includes("")) {
+    if (Object.values(busqueda).some((valor) => valor.trim() === "")) {
       setAlerta("Coloca nombre de artista y cancion");
       return;
     }
